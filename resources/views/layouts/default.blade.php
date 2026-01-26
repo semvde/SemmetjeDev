@@ -42,6 +42,8 @@
     </div>
 </nav>
 
+{{ $header ?? '' }}
+
 <main>
     {{ $slot }}
 </main>
@@ -50,7 +52,7 @@
     <div class="flex flex-col gap-3 max-w-[1200px] mx-auto my-0 pt-3 px-3 pb-0">
         <div class="flex grow justify-between gap-5 pb-2.5">
             <div class="max-w-lg">
-                <span class="text-base text-[--color-primary]">Semmetje</span>
+                <span class="text-base text-[--color-primary]">semmetje.dev</span>
                 <p>21-year-old student with a love for programming, games and amusement parks. Creating digital products
                     that truly enchant you, young and old!</p>
             </div>

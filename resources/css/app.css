@@ -43,6 +43,32 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+    line-height: 1;
+    font-weight: bold;
+    color: var(--color-primary);
+
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    color: unset;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+header {
+    padding: 0 12px;
+}
+
 main {
     flex-grow: 1;
 
