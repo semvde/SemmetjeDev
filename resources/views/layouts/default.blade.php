@@ -20,8 +20,12 @@
 
 <body>
 
-<nav>
-
+<nav class="bg-[--body-background-layered-color]">
+    <div class="flex justify-between items-center gap-12 max-w-[1200px] mx-auto my-0 px-3 py-0">
+        <a href="{{ route('home') }}" class="text-xl font-semibold">
+            Semmetje
+        </a>
+    </div>
 </nav>
 
 <main>
