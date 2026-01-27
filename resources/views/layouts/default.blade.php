@@ -27,7 +27,7 @@
         </a>
         <ul class="flex gap-12 font-medium">
             <li class="inline-block py-5">
-                <a href="">About</a>
+                <a href="{{ route('home') }}#about-me">About</a>
             </li>
             <li class="inline-block py-5">
                 <a href="">Projects</a>
@@ -37,7 +37,7 @@
             </li>
             <li class="inline-block py-5">
                 <a href=""
-                   class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded px-4 py-2"
+                   class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                    style="corner-shape: scoop">Contact</a>
             </li>
         </ul>
@@ -60,7 +60,7 @@
             </div>
             <ul>
                 <li><span class="text-base text-[--color-primary]">Quick links</span></li>
-                <li><a href="">About</a></li>
+                <li><a href="{{ route('home') }}#about-me">About</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">Blog</a></li>
             </ul>

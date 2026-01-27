@@ -6,6 +6,8 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-color: var(--color-primary) var(--body-background-color);
+    scrollbar-width: thin;
 }
 
 :root {
