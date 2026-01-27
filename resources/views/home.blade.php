@@ -1,14 +1,32 @@
 <x-default-layout>
     <x-slot name="header">
-        <header class="flex justify-center items-center gap-5 h-[calc(100dvh-64px)]">
+        <header
+            class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100dvh-64px)]">
             <div>
                 <span>👋 Hello World!</span>
                 <h1>I'm Sem van den Ende</h1>
                 <p class="text-3xl mb-5">Full-stack Developer</p>
                 <p class="text-lg max-w-xl">21-year-old student with a love for programming, games and amusement parks.
                     Creating digital products that truly enchant you, young and old!</p>
+                <div class="flex gap-5 items-center mt-5">
+                    <a href=""
+                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                       style="corner-shape: scoop">More about me</a>
+                    <a href=""
+                       class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded px-4 py-2"
+                       style="corner-shape: scoop">Projects</a>
+                </div>
             </div>
-            <img src="{{ asset('/images/SemCutout.webp') }}" alt="" class="h-full object-contain">
+            <img src="{{ asset('/images/SemCutout.webp') }}" alt=""
+                 class="self-end object-contain max-h-[675px] h-full">
         </header>
     </x-slot>
+
+    <section
+        class="bg-[--body-background-layered-color] border border-sky-700 shadow-lg shadow-sky-900 rounded-lg p-7 mb-14">
+        <span class="text-sm">🤗 Nice to meet you!</span>
+        <h2>About Me</h2>
+        <p>My name is Sem van den Ende. I am a 21-year-old Full-stack Developer based in The Netherlands that is
+            currently studying Creative Media and Game Technologies at Rotterdam University of Applied Sciences.</p>
+    </section>
 </x-default-layout>

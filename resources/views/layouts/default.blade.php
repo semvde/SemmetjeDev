@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ html_entity_decode($title ?? config('app.name') . " • Creative Developer") }}</title>
+    <title>{{ html_entity_decode($title ?? config('app.name') . " • Full-stack Developer") }}</title>
 
     <link rel="canonical" href="{{ url()->current() }}">
     @stack('head')
@@ -36,7 +36,9 @@
                 <a href="">Blog</a>
             </li>
             <li class="inline-block py-5">
-                <a href="">Contact</a>
+                <a href=""
+                   class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded px-4 py-2"
+                   style="corner-shape: scoop">Contact</a>
             </li>
         </ul>
     </div>
@@ -99,3 +101,5 @@
 </footer>
 
 </body>
+
+</html>
