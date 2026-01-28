@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::permanentRedirect('/dashboard', '/')
@@ -15,5 +16,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [HomeController::class, 'home'])
     ->name('home');
+
+Route::resource('projects', ProjectController::class)
+    ->only(['index', 'show']);
 
 require __DIR__ . '/auth.php';

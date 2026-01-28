@@ -12,7 +12,7 @@
                     <a href="#about-me"
                        class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                        style="corner-shape: scoop">More about me</a>
-                    <a href=""
+                    <a href="{{ route('projects.index') }}"
                        class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[#00DDDD20]"
                        style="corner-shape: scoop">Projects</a>
                 </div>
