@@ -1,9 +1,42 @@
-<x-default-layout>
+<x-default-layout title="Project • Semmetje">
     <x-slot name="header">
         <header
             class="flex flex-col justify-center items-center bg-gradient-to-bl from-sky-900 via-transparent to-transparent h-40">
-            <span>✨ Things I'm proud of</span>
-            <h1>Projects</h1>
+            <span>✨ My best work!</span>
+            <h1 class="text-white">Projects</h1>
         </header>
     </x-slot>
+
+    <section class="py-14">
+        <div class="grid grid-cols-1 gap-5">
+            @forelse($projects as $project)
+                <a href="{{ route('projects.show', $project) }}">
+                    <article
+                        class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden">
+                        <div class="relative aspect-video w-80">
+                            <img src="{{ asset($project->list_image) }}" alt="{{ $project->name }}"
+                                 class="absolute object-cover clip-slanted h-full">
+                            @if($project->open_source)
+                                <div
+                                    class="text-xs bg-green-700/85 border border-green-500/50 rounded-full absolute top-2 right-3 px-2 py-1 z-50">
+                                    <i class="text-green-300 fa-solid fa-unlock"></i> <span class="text-green-100">Open Source</span>
+                                </div>
+                            @else
+                                <div
+                                    class="text-xs bg-orange-700/85 border border-orange-500/50 rounded-full absolute top-2 right-3 px-2 py-1 z-50">
+                                    <i class="text-orange-300 fa-solid fa-unlock"></i> <span class="text-orange-100">Closed Source</span>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="p-3">
+                            <h2 class="text-3xl text-white">{{ $project->name }}</h2>
+                            <p>{{ $project->summary }}</p>
+                        </div>
+                    </article>
+                </a>
+            @empty
+
+            @endforelse
+        </div>
+    </section>
 </x-default-layout>

@@ -4,7 +4,7 @@
             class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100dvh-64px)] max-sm:flex-col">
             <div class="max-sm:mt-[15dvh]">
                 <span>👋 Hello World!</span>
-                <h1 class="max-sm:text-4xl">I'm Sem van den Ende</h1>
+                <h1 class="text-white max-sm:text-4xl">I'm Sem van den Ende</h1>
                 <p class="text-3xl mb-5">Full-stack Developer</p>
                 <p class="text-lg max-w-xl">21-year-old student with a love for programming, games and amusement parks.
                     Creating digital products that truly enchant you, young and old!</p>
@@ -26,7 +26,7 @@
         class="bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg p-7 mb-14"
         id="about-me">
         <span class="text-sm">🤗 Nice to meet you!</span>
-        <h2>About Me</h2>
+        <h2 class="text-white">About Me</h2>
         <p class="mb-5">I'm Sem, a 21-year-old student with a passion for programming, games, and amusement parks. I
             love building interactive digital experiences that are polished, playful, and immersive, whether it's
             websites, apps, or games.</p>

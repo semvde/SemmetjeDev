@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .clip-slanted {
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            calc(100% - 20px) 100%,
+            0 100%
+        );
+    }
+}
+
 * {
     box-sizing: border-box;
     scrollbar-color: var(--color-primary) var(--body-background-color);
