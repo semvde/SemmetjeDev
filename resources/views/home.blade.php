@@ -1,14 +1,14 @@
 <x-default-layout>
     <x-slot name="header">
         <header
-            class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100dvh-64px)]">
-            <div>
+            class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100dvh-64px)] max-sm:flex-col">
+            <div class="max-sm:mt-[15dvh]">
                 <span>👋 Hello World!</span>
-                <h1>I'm Sem van den Ende</h1>
+                <h1 class="max-sm:text-4xl">I'm Sem van den Ende</h1>
                 <p class="text-3xl mb-5">Full-stack Developer</p>
                 <p class="text-lg max-w-xl">21-year-old student with a love for programming, games and amusement parks.
                     Creating digital products that truly enchant you, young and old!</p>
-                <div class="flex gap-5 items-center mt-5">
+                <div class="flex gap-5 items-center mt-5 max-sm:justify-center">
                     <a href="#about-me"
                        class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                        style="corner-shape: scoop">More about me</a>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <img src="{{ asset('/images/SemCutout.webp') }}" alt=""
-                 class="self-end object-contain max-h-[675px] h-full">
+                 class="self-end object-contain max-h-[675px] h-full max-sm:object-bottom">
         </header>
     </x-slot>
 

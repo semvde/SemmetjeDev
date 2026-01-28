@@ -22,10 +22,10 @@
 
 <nav class="bg-[--body-background-layered-color] shadow shadow-gray-800">
     <div class="flex justify-between items-center gap-12 max-w-[1200px] mx-auto my-0 px-3 py-0">
-        <a href="{{ route('home') }}" class="text-2xl font-semibold">
+        <a href="{{ route('home') }}" class="text-2xl font-semibold" aria-label="Home">
             Semmetje
         </a>
-        <ul class="flex gap-12 font-medium">
+        <ul class="flex gap-12 font-medium max-sm:hidden">
             <li class="inline-block py-5">
                 <a href="{{ route('home') }}#about-me">About</a>
             </li>
@@ -41,6 +41,11 @@
                    style="corner-shape: scoop">Contact</a>
             </li>
         </ul>
+        <div class="text-3xl py-3.5 sm:!hidden">
+            <i tabindex="0" role="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu"
+               class="fa-solid fa-bars"
+               id="mobile-menu-toggle"></i>
+        </div>
     </div>
 </nav>
 
