@@ -13,7 +13,7 @@
                        class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                        style="corner-shape: scoop">More about me</a>
                     <a href=""
-                       class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded px-4 py-2"
+                       class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[#00DDDD20]"
                        style="corner-shape: scoop">Projects</a>
                 </div>
             </div>
