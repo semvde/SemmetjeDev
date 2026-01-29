@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $projects = Project::where('public', true)
             ->inRandomOrder()
-            ->take(3)
+            ->take(2)
             ->get();
 
         return view('home', compact('projects'));

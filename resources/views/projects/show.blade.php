@@ -33,9 +33,34 @@
     </section>
 
     <section class="pb-14">
-        <h2 class="text-white max-sm:text-3xl">Technologies Used</h2>
-        @foreach($project->projectTechnologies as $i => $projectTechnology)
-            {{ $projectTechnology->name }}
-        @endforeach
+        <h2 class="text-white mb-4 max-sm:text-3xl">Technologies Used</h2>
+        <div class="flex flex-wrap gap-y-3">
+            @foreach($project->projectTechnologies as $i => $projectTechnology)
+                <div class="bg-sky-950/75 clip-slanted-full-reduced px-8 py-2">
+                    <h3 class="text-lg">{{ $projectTechnology->name }}</h3>
+                    <p class="-ml-2">
+                        @switch($projectTechnology->type)
+                            @case('front')
+                                <span class="text-[#4FC3F7]">Front-end</span>
+                                @break
+                            @case('back')
+                                <span class="text-[#81C784]">Back-end</span>
+                                @break
+                            @case('full')
+                                <span class="text-[#BA68C8]">Full-stack</span>
+                                @break
+                            @case('tool')
+                                <span class="text-[#FFB74D]">Development Tool</span>
+                                @break
+                            @case('data')
+                                <span class="text-[#FFD54F]">Database</span>
+                                @break
+                            @default
+                                <span class="text-[#B0BEC5]">Other</span>
+                        @endswitch
+                    </p>
+                </div>
+            @endforeach
+        </div>
     </section>
 </x-default-layout>

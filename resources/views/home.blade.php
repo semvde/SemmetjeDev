@@ -43,7 +43,7 @@
             @forelse($projects as $project)
                 <a href="{{ route('projects.show', $project) }}">
                     <article
-                        class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden">
+                        class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.025] hover:border-sky-500 hover:shadow-sky-700">
                         <div class="relative aspect-video w-80">
                             <img src="{{ asset($project->list_image) }}" alt="{{ $project->name }}"
                                  class="absolute object-cover clip-slanted-right h-full">

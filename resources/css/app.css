@@ -22,6 +22,15 @@
             0 100%
         );
     }
+
+    .clip-slanted-full-reduced {
+        clip-path: polygon(
+            10px 0,
+            100% 0,
+            calc(100% - 10px) 100%,
+            0 100%
+        );
+    }
 }
 
 * {
