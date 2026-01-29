@@ -1,4 +1,4 @@
-<x-default-layout title="Project • Semmetje">
+<x-default-layout title="Projects • Semmetje">
     <x-slot name="header">
         <header
             class="flex flex-col justify-center items-center bg-gradient-to-bl from-sky-900 via-transparent to-transparent h-40">
@@ -15,7 +15,7 @@
                         class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden">
                         <div class="relative aspect-video w-80">
                             <img src="{{ asset($project->list_image) }}" alt="{{ $project->name }}"
-                                 class="absolute object-cover clip-slanted h-full">
+                                 class="absolute object-cover clip-slanted-right h-full">
                             @if($project->open_source)
                                 <div
                                     class="text-xs bg-green-700/85 border border-green-500/50 rounded-full absolute top-2 right-3 px-2 py-1 z-50">
@@ -28,9 +28,17 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="p-3">
+                        <div class="flex flex-col p-3">
                             <h2 class="text-3xl text-white">{{ $project->name }}</h2>
                             <p>{{ $project->summary }}</p>
+                            <div class="flex flex-wrap gap-1.5 mt-auto -ml-4">
+                                @foreach($project->projectTechnologies as $projectTechnology)
+                                    <div
+                                        class="text-center bg-sky-950/75 border border-sky-700 rounded-full px-4 py-1.5">
+                                        {{ $projectTechnology->name }}
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                     </article>
                 </a>

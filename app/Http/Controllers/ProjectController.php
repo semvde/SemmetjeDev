@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use Gate;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -36,9 +37,11 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Project $project)
     {
-        //
+        if (!$project->public && Gate::denies('admin')) abort(404);
+
+        return view('projects.show', compact('project'));
     }
 
     /**

@@ -5,9 +5,18 @@
 @tailwind utilities;
 
 @layer utilities {
-    .clip-slanted {
+    .clip-slanted-right {
         clip-path: polygon(
             0 0,
+            100% 0,
+            calc(100% - 20px) 100%,
+            0 100%
+        );
+    }
+
+    .clip-slanted-full {
+        clip-path: polygon(
+            20px 0,
             100% 0,
             calc(100% - 20px) 100%,
             0 100%
@@ -87,4 +96,10 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 12px;
+}
+
+.grid:not(.grid-cols-1) > a:only-child, .grid:not(.grid-cols-1) > img:only-child {
+    @media (width > 640px) {
+        grid-column: 2;
+    }
 }

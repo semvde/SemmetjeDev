@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -19,5 +20,16 @@ Route::get('/', [HomeController::class, 'home'])
 
 Route::resource('projects', ProjectController::class)
     ->only(['index', 'show']);
+
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])
+        ->name('index');
+
+    Route::get('projects', [AdminController::class, 'projects'])
+        ->name('projects.index');
+
+    Route::resource('projects', ProjectController::class)
+        ->except(['index']);
+});
 
 require __DIR__ . '/auth.php';

@@ -40,6 +40,13 @@
                    class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                    style="corner-shape: scoop">Contact</a>
             </li>
+            @can('admin')
+                <li class="inline-block py-5">
+                    <a href="{{ route('admin.index') }}"
+                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                       style="corner-shape: scoop">Admin</a>
+                </li>
+            @endcan
         </ul>
         <div class="text-3xl py-3.5 sm:!hidden">
             <i tabindex="0" role="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu"

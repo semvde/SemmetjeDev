@@ -17,7 +17,8 @@
                        style="corner-shape: scoop">Projects</a>
                 </div>
             </div>
-            <img src="{{ asset('/images/SemCutout.webp') }}" alt=""
+            <img src="{{ asset('/images/SemCutout.webp') }}"
+                 alt="Professional portrait of a young man with short blond hair and black glasses, smiling slightly and wearing a dark polo shirt."
                  class="self-end object-contain max-h-[675px] h-full max-sm:object-bottom">
         </header>
     </x-slot>
