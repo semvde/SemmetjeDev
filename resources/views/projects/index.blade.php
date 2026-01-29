@@ -43,7 +43,7 @@
                     </article>
                 </a>
             @empty
-
+                <p class="text-center">Looks like there aren't any public projects currently! Come back soon!</p>
             @endforelse
         </div>
     </section>
