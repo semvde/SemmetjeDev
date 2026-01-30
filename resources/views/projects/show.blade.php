@@ -11,12 +11,16 @@
             <h1 class="absolute text-white max-sm:text-4xl"
                 style="text-shadow: 0 0 20px #0C4A6E">{{ $project->name }}</h1>
             <div class="absolute bottom-5 flex items-center gap-3 mt-3">
-                <a href="{{ $project->link_github }}" target="_blank"
-                   class="text-[--text-color] bg-slate-800 rounded transition-colors duration-250 px-4 py-2 hover:bg-slate-700"
-                   style="corner-shape: scoop"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="{{ $project->link_live }}" target="_blank"
-                   class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
-                   style="corner-shape: scoop"><i class="fa-solid fa-globe"></i> Visit Website</a>
+                @if($project->link_github)
+                    <a href="{{ $project->link_github }}" target="_blank"
+                       class="text-[--text-color] bg-slate-800 rounded transition-colors duration-250 px-4 py-2 hover:bg-slate-700"
+                       style="corner-shape: scoop"><i class="fa-brands fa-github"></i> GitHub</a>
+                @endif
+                @if($project->link_live)
+                    <a href="{{ $project->link_live }}" target="_blank"
+                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                       style="corner-shape: scoop"><i class="fa-solid fa-globe"></i> Visit Website</a>
+                @endif
             </div>
         </header>
     </x-slot>
@@ -62,5 +66,10 @@
                 </div>
             @endforeach
         </div>
+    </section>
+
+    <section class="pb-14">
+        <h2 class="text-white max-sm:text-3xl">Insights</h2>
+        <p>{{ $project->insights }}</p>
     </section>
 </x-default-layout>

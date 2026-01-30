@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProjectTechnology extends Model
 {
+    protected $fillable = ['project_id', 'name', 'type'];
     protected $touches = ['project'];
 
     public function project(): BelongsTo

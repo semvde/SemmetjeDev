@@ -4,6 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    label {
+        font-family: "Lato", sans-serif;
+    }
+
+    .input {
+        corner-shape: squircle;
+        @apply border border-gray-300 rounded-lg focus:border-[--color-primary] focus:ring-[--color-primary];
+    }
+
+    input[type="checkbox"].input {
+        @apply p-3;
+    }
+}
+
 @layer utilities {
     .clip-slanted-right {
         clip-path: polygon(
@@ -110,5 +125,35 @@ main {
 .grid:not(.grid-cols-1) > a:only-child, .grid:not(.grid-cols-1) > img:only-child {
     @media (width > 640px) {
         grid-column: 2;
+    }
+}
+
+.alert {
+    position: fixed;
+    background-color: #00AA00;
+
+    color: #FFFFFF;
+    text-align: center;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    animation: fadeOut 3.5s forwards;
+
+    z-index: 999;
+    padding: 20px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }

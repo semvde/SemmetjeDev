@@ -8,6 +8,10 @@ use Storage;
 
 class Project extends Model
 {
+    protected $fillable = ['name', 'summary', 'link_github', 'link_live', 'description', 'insights',
+        'list_image',
+        'open_source', 'public', 'slug'];
+
     public function getRouteKeyName(): string
     {
         return 'slug';
@@ -26,6 +30,8 @@ class Project extends Model
     protected static function booted(): void
     {
         static::deleting(function ($project) {
+            $project->projectImages->each->delete();
+
             Storage::disk('public')->delete([
                 $project->list_image,
             ]);

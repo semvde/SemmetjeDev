@@ -1,4 +1,10 @@
 <x-admin-layout>
+    @if (session('alert'))
+        <div class="alert">
+            {{ session('alert') }}
+        </div>
+    @endif
+
     <section>
         <div class="flex justify-between items-center pb-3.5">
             <h1 class="text-5xl text-[--color-primary] max-sm:text-4xl">Projects</h1>
