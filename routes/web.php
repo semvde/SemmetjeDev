@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -20,6 +21,10 @@ Route::get('/', [HomeController::class, 'home'])
 
 Route::resource('projects', ProjectController::class)
     ->only(['index', 'show']);
+
+Route::resource('blog', BlogController::class)
+    ->only(['index', 'show'])
+    ->parameters(['blog' => 'post']);
 
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])

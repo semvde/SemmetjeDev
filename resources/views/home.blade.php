@@ -37,7 +37,7 @@
     </section>
 
     <section class="mb-14">
-        <span class="text-sm">📂 Some of my work</span>
+        <span class="text-sm">💼 Some of my work</span>
         <h2 class="text-white mb-4">Discover my Projects</h2>
         <div class="grid grid-cols-1 gap-5">
             @forelse($projects as $project)
@@ -78,7 +78,28 @@
             @endforelse
             <a href="{{ route('projects.index') }}"
                class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded transition-colors duration-250 w-fit px-4 py-2 hover:bg-[#00DDDD20]"
-               style="corner-shape: scoop">More Projects</a>
+               style="corner-shape: scoop">See all Projects</a>
+        </div>
+    </section>
+
+    @php
+        $posts = [];
+    @endphp
+
+    <section class="mb-14">
+        <span class="text-sm">💭 Thoughts in a database</span>
+        <h2 class="text-white mb-4">Latest Blog Posts</h2>
+        <div class="grid grid-cols-1 gap-5">
+            @forelse($posts as $post)
+                <a href="{{ route('blog.show', $post) }}">
+
+                </a>
+            @empty
+                <p>Looks like there aren't any public blog posts currently! Come back soon!</p>
+            @endforelse
+            <a href="{{ route('blog.index') }}"
+               class="text-[--button-primary-bg-color] border-2 border-[--button-primary-bg-color] rounded transition-colors duration-250 w-fit px-4 py-2 hover:bg-[#00DDDD20]"
+               style="corner-shape: scoop">See all Posts</a>
         </div>
     </section>
 </x-default-layout>

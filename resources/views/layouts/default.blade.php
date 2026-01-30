@@ -33,7 +33,7 @@
                 <a href="{{ route('projects.index') }}">Projects</a>
             </li>
             <li class="inline-block py-5">
-                <a href="">Blog</a>
+                <a href="{{ route('blog.index') }}">Blog</a>
             </li>
             <li class="inline-block py-5">
                 <a href=""
@@ -74,7 +74,7 @@
                 <li><span class="text-base text-[--color-primary]">Quick links</span></li>
                 <li><a href="{{ route('home') }}#about-me">About</a></li>
                 <li><a href="{{ route('projects.index') }}">Projects</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="{{ route('blog.index') }}">Blog</a></li>
             </ul>
             <ul>
                 <li><span class="text-base text-[--color-primary]">Contact</span></li>
