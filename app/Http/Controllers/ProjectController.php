@@ -37,8 +37,8 @@ class ProjectController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:100',
             'summary' => 'required|string|max:255',
-            'link_github' => 'required|url|max:255',
-            'link_live' => 'required|url|max:255',
+            'link_github' => 'nullable|url|max:255',
+            'link_live' => 'nullable|url|max:255',
             'description' => 'required|string',
             'insights' => 'required|string',
 
