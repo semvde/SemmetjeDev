@@ -30,8 +30,11 @@
         <p>{{ $project->description }}</p>
         <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2">
             @foreach($project->projectImages as $i => $projectImage)
-                <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
-                     class="aspect-video object-cover clip-slanted-full">
+                <div class="flex flex-col gap-2">
+                    <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
+                         class="aspect-video object-cover clip-slanted-full">
+                    <p class="text-center italic">{{ $projectImage->alt_text }}</p>
+                </div>
             @endforeach
         </div>
     </section>

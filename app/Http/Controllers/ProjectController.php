@@ -46,7 +46,7 @@ class ProjectController extends Controller
 
             'project_images' => 'required|array|min:1',
             'project_images.*.image' => 'required|image',
-            'project_images.*.alt_text' => 'string',
+            'project_images.*.alt_text' => 'string|nullable',
 
             'project_technologies' => 'required|array|min:1',
             'project_technologies.*.name' => 'required|string|max:100',
