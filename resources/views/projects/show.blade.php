@@ -3,7 +3,7 @@
         <header
             class="relative flex flex-col justify-center items-center h-80 max-sm:h-60">
             <div class="absolute inset-0 bg-cover bg-center"
-                 style="background-image: url('{{ asset($project->list_image) }}');">
+                 style="background-image: url('{{ asset('storage/' . $project->list_image) }}');">
             </div>
             <div class="absolute inset-0 bg-black/25"></div>
             <div class="absolute inset-0 bg-gradient-to-bl from-sky-900 via-transparent to-transparent"></div>
@@ -30,7 +30,7 @@
         <p>{{ $project->description }}</p>
         <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2">
             @foreach($project->projectImages as $i => $projectImage)
-                <img src="{{ asset($projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
+                <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
                      class="aspect-video object-cover clip-slanted-full">
             @endforeach
         </div>

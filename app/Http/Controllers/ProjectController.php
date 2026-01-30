@@ -56,7 +56,7 @@ class ProjectController extends Controller
             'public' => 'boolean'
         ]);
 
-        $validated['list_image'] = $request->file('list_image')->store('projects', 'public');
+        $validated['list_image'] = $request->file('list_image')->store('images/projects', 'public');
 
         $slug = Str::slug($request->input('name'));
         $originalSlug = $slug;

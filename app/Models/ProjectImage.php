@@ -22,7 +22,7 @@ class ProjectImage extends Model
         static::creating(function ($projectImage) {
             if ($projectImage->image instanceof UploadedFile) {
                 $projectImage->image = $projectImage->image
-                    ->store('projects', 'public');
+                    ->store('images/projects', 'public');
             }
         });
 
