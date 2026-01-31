@@ -26,6 +26,9 @@ Route::resource('blog', BlogController::class)
     ->only(['index', 'show'])
     ->parameters(['blog' => 'post']);
 
+Route::get('/contact', [HomeController::class, 'contact'])
+    ->name('contact');
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');

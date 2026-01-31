@@ -36,7 +36,7 @@
                 <div class="flex gap-3">
                     <div class="flex flex-col flex-1">
                         <label for="link_github">Link GitHub</label>
-                        <input type="url" name="link_github" id="link_github" value="{{ old('link_github') }}" required
+                        <input type="url" name="link_github" id="link_github" value="{{ old('link_github') }}"
                                class="input">
                         @error('link_github')
                         <span class="text-red-700">{{ $message }}</span>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="flex flex-col flex-1">
                         <label for="link_live">Link Live</label>
-                        <input type="url" name="link_live" id="link_live" value="{{ old('link_live') }}" required
+                        <input type="url" name="link_live" id="link_live" value="{{ old('link_live') }}"
                                class="input">
                         @error('link_live')
                         <span class="text-red-700">{{ $message }}</span>

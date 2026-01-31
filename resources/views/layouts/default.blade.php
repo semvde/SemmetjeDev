@@ -36,7 +36,7 @@
                 <a href="{{ route('blog.index') }}">Blog</a>
             </li>
             <li class="inline-block py-5">
-                <a href=""
+                <a href="{{ route('contact') }}"
                    class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                    style="corner-shape: scoop">Contact</a>
             </li>
@@ -78,9 +78,9 @@
             </ul>
             <ul>
                 <li><span class="text-base text-[--color-primary]">Contact</span></li>
-                <li><a href="">option 1</a></li>
-                <li><a href="">option 2</a></li>
-                <li><a href="">option 3</a></li>
+                <li><a href="https://linkedin.com/in/semvandenende" target="_blank">LinkedIn</a></li>
+                <li><a href="https://instagram.com/semmetjedev" target="_blank">Instagram</a></li>
+                <li><a href="mailto:contact@semmetje.dev" target="_blank">Email</a></li>
             </ul>
         </div>
         <hr class="border-t border-t-gray-800">
