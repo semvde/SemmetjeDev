@@ -11,9 +11,10 @@
             <h1 class="absolute text-white max-sm:text-4xl"
                 style="text-shadow: 0 0 20px #0C4A6E">{{ $project->name }}</h1>
             @if($project->in_development)
-                <p class="absolute top-14 text-xs bg-red-900 rounded-full px-4 py-2 max-sm:top-4">This project is
-                    still actively being worked on! When viewing the demo, please be aware that some things may not work
-                    properly or are incomplete! </p>
+                <p class="absolute top-14 text-xs bg-red-900 rounded-full px-4 py-2 max-sm:top-4">
+                    This project is actively being developed. Please note that the demo may contain incomplete or
+                    non-functional features.
+                </p>
             @endif
             <div class="absolute bottom-5 flex items-center gap-3 mt-3">
                 @if($project->link_github)

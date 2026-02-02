@@ -27,6 +27,12 @@
                                     <i class="text-orange-300 fa-solid fa-unlock"></i> <span class="text-orange-100">Closed Source</span>
                                 </div>
                             @endif
+                            @if($project->in_development)
+                                <div
+                                    class="text-xs bg-yellow-700/85 border border-yellow-500/50 rounded-full absolute top-2 left-3 px-2 py-1 z-50">
+                                    <i class="text-yellow-300 fa-solid fa-code"></i> <span class="text-yellow-100">In Development</span>
+                                </div>
+                            @endif
                         </div>
                         <div class="flex flex-col p-3 max-sm:min-h-40">
                             <h2 class="text-3xl text-white">{{ $project->name }}</h2>
