@@ -89,6 +89,21 @@ body {
     margin: 0;
 }
 
+body.scroll-lock {
+    overflow: hidden;
+}
+
+body.scroll-lock::after {
+    content: '';
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", sans-serif;
     line-height: 1.2;
@@ -126,6 +141,33 @@ main {
     @media (width > 640px) {
         grid-column: 2;
     }
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    transition: opacity 0.25s;
+    opacity: 0;
+
+    width: 100%;
+    max-height: calc(100dvh - 100%);
+    overflow-y: auto;
+    z-index: -1;
+}
+
+nav #mobile-menu.active {
+    opacity: 1;
+    z-index: 999;
+}
+
+nav #mobile-menu .mobile-nav-container {
+    display: none;
+}
+
+nav #mobile-menu .mobile-nav-container.active {
+    display: flex;
 }
 
 .alert {

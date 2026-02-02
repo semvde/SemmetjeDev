@@ -15,12 +15,12 @@
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/d0c003e79c.js" crossorigin="anonymous"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/mobile-menu.js'])
 </head>
 
 <body>
 
-<nav class="bg-[--body-background-layered-color] shadow shadow-gray-800">
+<nav class="relative bg-[--body-background-layered-color] shadow shadow-gray-800">
     <div class="flex justify-between items-center gap-12 max-w-[1200px] mx-auto my-0 px-3 py-0">
         <a href="{{ route('home') }}" class="text-2xl font-semibold" aria-label="Home">
             Semmetje
@@ -53,6 +53,32 @@
                class="fa-solid fa-bars"
                id="mobile-menu-toggle"></i>
         </div>
+    </div>
+    <div class="bg-[--body-background-color]"
+         id="mobile-menu">
+        <ul class="flex flex-col items-start gap-5 px-5 py-5 mobile-nav-container">
+            <li class="inline-block">
+                <a href="{{ route('home') }}#about-me">About</a>
+            </li>
+            <li class="inline-block">
+                <a href="{{ route('projects.index') }}">Projects</a>
+            </li>
+            <li class="inline-block">
+                <a href="{{ route('blog.index') }}">Blog</a>
+            </li>
+            <li class="inline-block">
+                <a href="{{ route('contact') }}"
+                   class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                   style="corner-shape: scoop">Contact</a>
+            </li>
+            @can('admin')
+                <li class="inline-block">
+                    <a href="{{ route('admin.index') }}"
+                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                       style="corner-shape: scoop">Admin</a>
+                </li>
+            @endcan
+        </ul>
     </div>
 </nav>
 
