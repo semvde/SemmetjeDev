@@ -33,7 +33,7 @@
                 <div class="flex flex-col gap-2">
                     <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
                          class="aspect-video object-cover clip-slanted-full">
-                    <p class="text-center italic">{{ $projectImage->alt_text }}</p>
+                    <p class="text-center italic -ml-4 px-2">{{ $projectImage->alt_text }}</p>
                 </div>
             @endforeach
         </div>

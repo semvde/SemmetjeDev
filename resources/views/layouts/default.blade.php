@@ -64,24 +64,26 @@
 
 <footer class="text-sm bg-[--body-background-layered-color] border-t border-gray-800 py-3">
     <div class="flex flex-col gap-3 max-w-[1200px] mx-auto my-0 pt-3 px-3 pb-0">
-        <div class="flex grow justify-between gap-5 pb-2.5">
+        <div class="flex grow justify-between gap-5 pb-2.5 max-sm:flex-col">
             <div class="max-w-lg">
                 <span class="text-base text-[--color-primary]">semmetje.dev</span>
                 <p>21-year-old student with a love for programming, games and amusement parks. Creating digital products
                     that truly enchant you, young and old!</p>
             </div>
-            <ul>
-                <li><span class="text-base text-[--color-primary]">Quick links</span></li>
-                <li><a href="{{ route('home') }}#about-me">About</a></li>
-                <li><a href="{{ route('projects.index') }}">Projects</a></li>
-                <li><a href="{{ route('blog.index') }}">Blog</a></li>
-            </ul>
-            <ul>
-                <li><span class="text-base text-[--color-primary]">Contact</span></li>
-                <li><a href="https://linkedin.com/in/semvandenende" target="_blank">LinkedIn</a></li>
-                <li><a href="https://instagram.com/semmetjedev" target="_blank">Instagram</a></li>
-                <li><a href="mailto:contact@semmetje.dev" target="_blank">Email</a></li>
-            </ul>
+            <div class="flex gap-32 max-sm:justify-between">
+                <ul>
+                    <li><span class="text-base text-[--color-primary]">Quick links</span></li>
+                    <li><a href="{{ route('home') }}#about-me">About</a></li>
+                    <li><a href="{{ route('projects.index') }}">Projects</a></li>
+                    <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                </ul>
+                <ul>
+                    <li><span class="text-base text-[--color-primary]">Contact</span></li>
+                    <li><a href="https://linkedin.com/in/semvandenende" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://instagram.com/semmetjedev" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:contact@semmetje.dev" target="_blank">Email</a></li>
+                </ul>
+            </div>
         </div>
         <hr class="border-t border-t-gray-800">
         <div class="flex grow items-center justify-between gap-14 text-xs

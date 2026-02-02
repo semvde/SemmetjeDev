@@ -43,10 +43,10 @@
             @forelse($projects as $project)
                 <a href="{{ route('projects.show', $project) }}">
                     <article
-                        class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.025] hover:border-sky-500 hover:shadow-sky-700">
-                        <div class="relative aspect-video w-80">
+                        class="flex bg-[--body-background-layered-color] border border-sky-700 shadow-md shadow-sky-900 rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.025] hover:border-sky-500 hover:shadow-sky-700 max-sm:flex-col">
+                        <div class="relative aspect-video w-80 max-sm:w-full max-sm:aspect-[16/6]">
                             <img src="{{ asset('storage/' . $project->list_image) }}" alt="{{ $project->name }}"
-                                 class="absolute object-cover clip-slanted-right h-full">
+                                 class="absolute object-cover w-full h-full sm:clip-slanted-right">
                             @if($project->open_source)
                                 <div
                                     class="text-xs bg-green-700/85 border border-green-500/50 rounded-full absolute top-2 right-3 px-2 py-1 z-50">
@@ -59,10 +59,10 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="flex flex-col p-3">
+                        <div class="flex flex-col p-3 max-sm:min-h-40">
                             <h2 class="text-3xl text-white">{{ $project->name }}</h2>
                             <p>{{ $project->summary }}</p>
-                            <div class="flex flex-wrap gap-1.5 mt-auto -ml-4">
+                            <div class="flex flex-wrap gap-1.5 mt-auto sm:-ml-4">
                                 @foreach($project->projectTechnologies as $projectTechnology)
                                     <div
                                         class="text-center bg-sky-950/75 border border-sky-700 rounded-full px-4 py-1.5">
