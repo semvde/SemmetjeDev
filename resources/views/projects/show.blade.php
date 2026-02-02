@@ -10,6 +10,11 @@
 
             <h1 class="absolute text-white max-sm:text-4xl"
                 style="text-shadow: 0 0 20px #0C4A6E">{{ $project->name }}</h1>
+            @if($project->in_development)
+                <p class="absolute top-14 text-xs bg-red-900 rounded-full px-4 py-2 max-sm:top-4">This project is
+                    still actively being worked on! When viewing the demo, please be aware that some things may not work
+                    properly or are incomplete! </p>
+            @endif
             <div class="absolute bottom-5 flex items-center gap-3 mt-3">
                 @if($project->link_github)
                     <a href="{{ $project->link_github }}" target="_blank"
@@ -31,8 +36,10 @@
         <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2">
             @foreach($project->projectImages as $i => $projectImage)
                 <div class="flex flex-col gap-2">
-                    <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
-                         class="aspect-video object-cover clip-slanted-full">
+                    <div class="clip-border">
+                        <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
+                             class="aspect-video object-cover clip-slanted-full">
+                    </div>
                     <p class="text-center italic -ml-4 px-2">{{ $projectImage->alt_text }}</p>
                 </div>
             @endforeach

@@ -14,7 +14,8 @@ class AdminController extends Controller
 
     public function projects()
     {
-        $projects = Project::all();
+        $projects = Project::latest()
+            ->get();
 
         return view('admin.projects.index', compact('projects'));
     }
