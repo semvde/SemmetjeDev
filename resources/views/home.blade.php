@@ -31,9 +31,42 @@
         <p class="mb-5">I'm Sem, a 21-year-old student with a passion for programming, games, and amusement parks. I
             love building interactive digital experiences that are polished, playful, and immersive, whether it's
             websites, apps, or games.</p>
-        <p>I'm currently in the second year of the Creative Media and Game Technologies program at Rotterdam University
+        <p class="mb-10">I'm currently in the second year of the Creative Media and Game Technologies program at
+            Rotterdam University
             of Applied Sciences, where I design and develop projects using technologies like Laravel, React, JavaScript,
             Tailwind CSS, Express, and C#.</p>
+        <h3 class="text-white text-center mb-5">My Development Arsenal</h3>
+        <div class="grid grid-cols-3 gap-7 max-sm:grid-cols-1 max-sm:gap-2">
+            <div class="mb-5">
+                <h4 class="text-white text-center mb-2.5">Front-end</h4>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <img src="https://skillicons.dev/icons?i=html" alt="HTML">
+                    <img src="https://skillicons.dev/icons?i=css" alt="CSS">
+                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+                    <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
+                    <img src="https://skillicons.dev/icons?i=react" alt="React">
+                    <img src="https://skillicons.dev/icons?i=unity" alt="Unity">
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="text-white text-center mb-2.5">Back-end</h4>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <img src="https://skillicons.dev/icons?i=php" alt="PHP">
+                    <img src="https://skillicons.dev/icons?i=laravel" alt="Laravel">
+                    <img src="https://skillicons.dev/icons?i=nodejs" alt="NodeJS">
+                    <img src="https://skillicons.dev/icons?i=express" alt="Express">
+                    <img src="https://skillicons.dev/icons?i=cs" alt="CSharp">
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="text-white text-center mb-2.5">Databases</h4>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+                    <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite">
+                    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="mb-14">
@@ -56,6 +89,12 @@
                                 <div
                                     class="text-xs bg-orange-700/85 border border-orange-500/50 rounded-full absolute top-2 right-3 px-2 py-1 z-50">
                                     <i class="text-orange-300 fa-solid fa-unlock"></i> <span class="text-orange-100">Closed Source</span>
+                                </div>
+                            @endif
+                            @if($project->in_development)
+                                <div
+                                    class="text-xs bg-yellow-700/85 border border-yellow-500/50 rounded-full absolute top-2 left-3 px-2 py-1 z-50">
+                                    <i class="text-yellow-300 fa-solid fa-code"></i> <span class="text-yellow-100">In Development</span>
                                 </div>
                             @endif
                         </div>

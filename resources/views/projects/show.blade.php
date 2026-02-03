@@ -5,13 +5,14 @@
             <div class="absolute inset-0 bg-cover bg-center"
                  style="background-image: url('{{ asset('storage/' . $project->list_image) }}');">
             </div>
-            <div class="absolute inset-0 bg-black/25"></div>
+            <div class="absolute inset-0 bg-black/75"></div>
             <div class="absolute inset-0 bg-gradient-to-bl from-sky-900 via-transparent to-transparent"></div>
 
             <h1 class="absolute text-white max-sm:text-4xl"
                 style="text-shadow: 0 0 20px #0C4A6E">{{ $project->name }}</h1>
             @if($project->in_development)
-                <p class="absolute top-14 text-xs bg-red-900 rounded-full px-4 py-2 max-sm:top-4">
+                <p class="absolute top-14 text-xs text-red-100 bg-red-700/85 border border-red-500/50 rounded-full mx-5 px-4 py-2 max-sm:top-4">
+                    <i class="text-red-300 fa-solid fa-code"></i>
                     This project is actively being developed. Please note that the demo may contain incomplete or
                     non-functional features.
                 </p>
@@ -19,12 +20,12 @@
             <div class="absolute bottom-5 flex items-center gap-3 mt-3">
                 @if($project->link_github)
                     <a href="{{ $project->link_github }}" target="_blank"
-                       class="text-[--text-color] bg-slate-800 rounded transition-colors duration-250 px-4 py-2 hover:bg-slate-700"
+                       class="text-[--text-color] bg-slate-800 shadow-md shadow-gray-700 rounded transition-colors duration-250 px-4 py-2 hover:bg-slate-700"
                        style="corner-shape: scoop"><i class="fa-brands fa-github"></i> GitHub</a>
                 @endif
                 @if($project->link_live)
                     <a href="{{ $project->link_live }}" target="_blank"
-                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
+                       class="text-[--button-primary-text-color] bg-[--button-primary-bg-color] shadow-md shadow-sky-700 rounded transition-colors duration-250 px-4 py-2 hover:bg-[--button-primary-hoverbg-color]"
                        style="corner-shape: scoop"><i class="fa-solid fa-globe"></i> Visit Website</a>
                 @endif
             </div>
