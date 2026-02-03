@@ -1,7 +1,7 @@
 <x-default-layout>
     <x-slot name="header">
         <header
-            class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100dvh-64px)] max-sm:flex-col">
+            class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100lvh-64px)] max-sm:flex-col">
             <div class="max-sm:mt-[15dvh]">
                 <span>👋 Hello World!</span>
                 <h1 class="text-white max-sm:text-4xl">I'm Sem van den Ende</h1>
