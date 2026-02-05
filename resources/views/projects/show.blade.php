@@ -1,4 +1,8 @@
 <x-default-layout title="{{ $project->name }} • Semmetje">
+    @push('head')
+        @vite(['resources/js/project-lightbox.js'])
+    @endpush
+
     <x-slot name="header">
         <header
             class="relative flex flex-col justify-center items-center h-80 max-sm:h-60">
@@ -35,12 +39,13 @@
     <section class="py-14">
         <h2 class="text-white max-sm:text-3xl">About this Project</h2>
         <p>{{ $project->description }}</p>
-        <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2">
+        <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2" id="gallery">
             @foreach($project->projectImages as $i => $projectImage)
                 <div class="flex flex-col gap-2">
-                    <div class="clip-border">
+                    <div class="clip-border duration-500 hover:scale-105 focus-within:scale-105 focus-within:-rotate-1">
                         <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
-                             class="aspect-video object-cover clip-slanted-full">
+                             class="aspect-video object-cover clip-slanted-full cursor-pointer gallery-image"
+                             tabindex="0" role="button">
                     </div>
                     <p class="text-center italic -ml-4 px-2">{{ $projectImage->alt_text }}</p>
                 </div>
@@ -84,4 +89,12 @@
         <h2 class="text-white max-sm:text-3xl">Insights</h2>
         <p>{{ $project->insights }}</p>
     </section>
+
+    <div class="fixed inset-0 items-center justify-center bg-black/75 w-full h-full z-50 hidden" id="lightbox">
+        <img src="" alt=""
+             class="max-h-[75vh] rounded-md shadow-md shadow-sky-900" id="lightbox-image">
+        <i tabindex="0" role="button" aria-label="Close"
+           class="absolute top-10 right-10 text-2xl fa-solid fa-xmark"
+           id="lightbox-close"></i>
+    </div>
 </x-default-layout>
