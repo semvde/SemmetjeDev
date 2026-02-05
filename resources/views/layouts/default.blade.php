@@ -119,7 +119,7 @@
                 <i>~ Made with ❤️ using Laravel ~</i>
             </div>
             <ul class="flex list-none gap-2.5">
-                <li><a href="">Privacy Policy</a></li>
+                <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
                 <li aria-hidden="true">•</li>
                 <li><a href="">Accessibility Statement</a></li>
             </ul>

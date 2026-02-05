@@ -1,4 +1,9 @@
 <x-default-layout>
+    @push('head')
+        <meta name="description"
+              content="Portfolio of Sem van den Ende, a full-stack developer creating playful and immersive digital experiences with Laravel, React and other modern web technologies.">
+    @endpush
+
     <x-slot name="header">
         <header
             class="flex justify-center items-center gap-5 bg-gradient-to-bl from-sky-900 via-transparent to-transparent overflow-hidden h-[calc(100lvh-64px)] max-sm:flex-col">

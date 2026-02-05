@@ -1,4 +1,9 @@
-<x-default-layout>
+<x-default-layout title="Contact • Semmetje">
+    @push('head')
+        <meta name="description"
+              content="Portfolio of Sem van den Ende, a full-stack developer. Feel free to send me a message through the options provided here.">
+    @endpush
+
     <x-slot name="header">
         <header
             class="flex flex-col justify-center items-center bg-gradient-to-bl from-sky-900 via-transparent to-transparent h-40">

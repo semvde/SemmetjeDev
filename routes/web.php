@@ -29,6 +29,9 @@ Route::resource('blog', BlogController::class)
 Route::get('/contact', [HomeController::class, 'contact'])
     ->name('contact');
 
+Route::get('/privacy', [HomeController::class, 'privacy'])
+    ->name('privacy');
+
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])
         ->name('index');
