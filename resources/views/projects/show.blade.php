@@ -42,7 +42,7 @@
         <div class="grid grid-cols-3 gap-y-5 mt-7 max-sm:grid-cols-2" id="gallery">
             @foreach($project->projectImages as $i => $projectImage)
                 <div class="flex flex-col gap-2">
-                    <div class="clip-border duration-500 hover:scale-105 focus-within:scale-105 focus-within:-rotate-1">
+                    <div class="clip-border duration-500 hover:scale-105 focus-within:scale-105">
                         <img src="{{ asset('storage/' . $projectImage->image) }}" alt="{{ $projectImage->alt_text }}"
                              class="aspect-video object-cover clip-slanted-full cursor-pointer gallery-image"
                              tabindex="0" role="button">

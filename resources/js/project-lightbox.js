@@ -28,12 +28,14 @@ function setupKeyboard() {
     closeButton.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             closeLightBox(e);
+            gallery.firstElementChild.firstElementChild.firstElementChild.focus();
         }
     });
 
     lightbox.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeLightBox(e);
+            gallery.firstElementChild.firstElementChild.firstElementChild.focus();
         }
     });
 }
@@ -68,6 +70,4 @@ function closeLightBox(e) {
 
     lightboxImage.setAttribute('src', '');
     lightboxImage.setAttribute('alt', '');
-
-    gallery.firstElementChild.firstElementChild.firstElementChild.focus();
 }
