@@ -8,14 +8,14 @@
         <header
             class="flex flex-col justify-center items-center bg-gradient-to-bl from-sky-900 via-transparent to-transparent h-40">
             <span>🔐 Data secured!</span>
-            <h1 class="text-white">Privacy Policy</h1>
+            <h1 class="text-white max-sm:text-5xl">Privacy Policy</h1>
         </header>
     </x-slot>
 
     <section class="py-14">
         <div class="flex flex-col gap-10">
             <div>
-                <h2>semmetje.dev - Privacy Policy</h2>
+                <h2 class="max-sm:text-4xl">semmetje.dev - Privacy Policy</h2>
                 <i>Last updated: 05-02-2026</i>
             </div>
             <div>

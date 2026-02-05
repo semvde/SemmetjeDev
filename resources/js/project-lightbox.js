@@ -54,6 +54,7 @@ function openLightBox(image) {
     lightbox.classList.remove('hidden');
     lightbox.classList.add('flex');
     document.body.classList.add('scroll-lock');
+    document.body.classList.add('full');
 
     lightboxImage.setAttribute('src', image.src);
     lightboxImage.setAttribute('alt', image.alt);
@@ -67,6 +68,7 @@ function closeLightBox(e) {
     lightbox.classList.remove('flex');
     lightbox.classList.add('hidden');
     document.body.classList.remove('scroll-lock');
+    document.body.classList.remove('full');
 
     lightboxImage.setAttribute('src', '');
     lightboxImage.setAttribute('alt', '');
